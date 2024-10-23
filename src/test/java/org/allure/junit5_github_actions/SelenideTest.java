@@ -23,7 +23,7 @@ public class SelenideTest {
     @BeforeAll
     static void setupSelenoid() {
         String selenideUrl = System.getenv("SELENIDE_URL");
-        if (selenideUrl != null && selenideUrl != "") {
+        if (selenideUrl != null && !selenideUrl.isEmpty()) {
             // Configuration.remote = selenideUrl;
         }
     }
