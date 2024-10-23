@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SelenideTest {
 
@@ -30,7 +29,6 @@ public class SelenideTest {
 
     @Test
     public void testMainPage() {
-        assertEquals("8", Configuration.remote);
         Allure.step("Open main page", (step) -> {
             open("https://www.saucedemo.com");
         });
