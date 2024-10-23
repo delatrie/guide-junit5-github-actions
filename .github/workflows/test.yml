@@ -16,7 +16,6 @@ jobs:
           java-version: 17
 
       - name: Run tests
-        continue-on-error: true
         run: SELENIDE_URL="${{ vars.SELENIDE_URL }}" ./gradlew clean test
 
       - name: Load test report history
