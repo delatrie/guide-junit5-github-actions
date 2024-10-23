@@ -25,6 +25,7 @@ public class StepTest {
     @Step("Parent annotated step with parameter [{parameter}]")
     public void annotatedStep(final String parameter) {
         nestedAnnotatedStep();
+        nestedAnnotatedStep();
     }
 
     @Step("Nested annotated step with global parameter [{this.GLOBAL_PARAMETER}]")
