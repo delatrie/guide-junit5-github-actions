@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import java.lang.RuntimeException;
 
 public class SelenideTest {
 
@@ -29,6 +30,7 @@ public class SelenideTest {
 
     @Test
     public void testMainPage() {
+        throw new RuntimeException(Configuration.remote);
         Allure.step("Open main page", (step) -> {
             open("https://www.saucedemo.com");
         });
