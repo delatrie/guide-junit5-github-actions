@@ -30,7 +30,6 @@ public class SelenideTest {
 
     @Test
     public void testMainPage() {
-        throw new RuntimeException(Configuration.remote);
         Allure.step("Open main page", (step) -> {
             open("https://www.saucedemo.com");
         });
@@ -38,6 +37,8 @@ public class SelenideTest {
         Allure.step("The login logo should be visible", (step) -> {
             $(".login_logo").shouldBe(Condition.visible);
         });
+        
+        throw new RuntimeException(Configuration.remote);
     }
 
 }
