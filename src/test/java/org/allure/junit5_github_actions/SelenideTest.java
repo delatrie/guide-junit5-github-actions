@@ -24,7 +24,7 @@ public class SelenideTest {
     static void setupSelenoid() {
         String selenideUrl = System.getenv("SELENIDE_URL");
         if (selenideUrl != null && selenideUrl != "") {
-            Configuration.remote = selenideUrl;
+            // Configuration.remote = selenideUrl;
         }
     }
 
