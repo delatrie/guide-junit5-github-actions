@@ -18,6 +18,9 @@ jobs:
       - name: "Check chrome"
         run: "google-chrome --version"
 
+      - name: "Google driver version"
+        run: /usr/local/share/chrome_driver/chromedriver --version
+
       - name: Run tests
         run: SELENIDE_URL="${{ vars.SELENIDE_URL }}" ./gradlew clean test
 
