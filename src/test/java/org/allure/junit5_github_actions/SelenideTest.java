@@ -23,7 +23,12 @@ public class SelenideTest {
     static void setupSelenoid() {
         String selenideUrl = System.getenv("SELENIDE_URL");
         if (selenideUrl != null && !selenideUrl.isEmpty()) {
-            // Configuration.remote = selenideUrl;
+            Configuration.remote = selenideUrl;
+        }
+
+        String headless = System.getenv("SELENIDE_HEADLESS");
+        if (headless != null && headless.toLowerCase().equals("true")) {
+            Configuration.headless = true;
         }
     }
 
